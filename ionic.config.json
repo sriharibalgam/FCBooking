@@ -1,0 +1,7 @@
+{
+  "name": "FCappclient",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
