@@ -1,0 +1,27 @@
+[
+    {
+        "fcName" : "Food Court 1",
+        "fcStatus" : [
+            {
+                "slotId" : 1,
+                "seatsBooked" : 35,
+                "seatsAvailable" : 65
+            },
+            {
+                "slotId" : 2,
+                "seatsBooked" : 35,
+                "seatsAvailable" : 65
+            }
+        ]
+    },
+    {
+        "fcName" : "Food Court 2",
+        "fcStatus" : [
+            {
+                "slotId" : 2,
+                "seatsBooked" : 55,
+                "seatsAvailable" : 45
+            }
+        ]
+    }
+]

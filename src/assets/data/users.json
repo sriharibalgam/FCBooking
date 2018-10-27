@@ -1,0 +1,26 @@
+[
+    {
+        "name" : "John Wick",
+        "password" : "john@123",
+        "id" : "123456",
+        "role" : "emp"
+    },
+    {
+        "name" : "Indiana Jones",
+        "password" : "indiana@123",
+        "id" : "234567",
+        "role" : "emp"
+    },
+    {
+        "name" : "Bruce Wayne",
+        "password" : "bruce@123",
+        "id" : "345678",
+        "role" : "emp"
+    },
+    {
+        "name" : "Admin",
+        "password" : "admin@123",
+        "id" : "111111",
+        "role" : "admin"
+    }
+]

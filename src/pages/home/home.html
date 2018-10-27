@@ -1,0 +1,72 @@
+<!--
+  Generated template for the HomePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title class="content-align-center">Home</ion-title>
+  </ion-navbar>
+  <!--ion-toolbar class="greeting">
+      <div class="content-align-center $fontmd">Hello</div>
+    </ion-toolbar-->
+</ion-header>
+
+
+<ion-content *ngIf="!bookingStatus" padding>
+
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content
+          pullingIcon="arrow-dropdown"
+          pullingText="Pull to refresh"
+          refreshingSpinner="circles"
+          refreshingText="Refreshing...">
+        </ion-refresher-content>
+      </ion-refresher>
+
+    <p>Finding a table in Food Court is easy now!</p>
+    <br>
+
+    <h6>Food Court Status</h6>
+    <br>
+
+    <ion-card *ngFor="let fc of foodCourts" padding (click)="goToFC(fc.fcName)" class="fcCard">
+      <ion-card-header>
+          {{ fc.fcName }}
+      </ion-card-header> 
+      <ion-card-content *ngFor="let slot of slots">
+        <div>
+          <p>{{ slot.slotId }}</p>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <button ion-button (click)="bookNow()" class="btn-full-width">Book Now</button>
+  </ion-toolbar>
+</ion-footer>
+
+<ion-content *ngIf="bookingStatus" padding>
+
+    <h4>Your Booking Details</h4>
+  
+    <ion-card >
+        <ion-card-header>
+          {{ fc.fcName }}
+        </ion-card-header>
+        <ion-card-content>
+          <div>Seats Allotted: {{ fc.seatsBooked }}</div>
+        </ion-card-content>
+    </ion-card>
+  
+</ion-content>
+
+

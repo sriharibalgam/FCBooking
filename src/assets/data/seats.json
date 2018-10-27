@@ -1,0 +1,160 @@
+[
+    {
+        "id" : "001",
+        "fc" : "1",
+        "status" : [
+            {
+                "slot1" : {
+                    "bookingStatus" : "booked",
+                    "empid" : "123456"
+                },
+                "slot2" : {
+                    "bookingStatus" : "available",
+                    "empid" : null
+                }
+            }
+        ]
+    },
+    {
+        "id" : "002",
+        "fc" : "1",
+        "status" : [
+            {
+                "slot1" : {
+                    "bookingStatus" : "booked",
+                    "empid" : "123456"
+                },
+                "slot2" : {
+                    "bookingStatus" : "booked",
+                    "empid" : null
+                }
+            }
+        ]
+    },{
+        "id" : "003",
+        "fc" : "1",
+        "status" : [
+            {
+                "slot1" : {
+                    "bookingStatus" : "available",
+                    "empid" : "123456"
+                },
+                "slot2" : {
+                    "bookingStatus" : "available",
+                    "empid" : null
+                }
+            }
+        ]
+    },
+    {
+        "id" : "004",
+        "fc" : "1",
+        "status" : [
+            {
+                "slot1" : {
+                    "bookingStatus" : "booked",
+                    "empid" : "123456"
+                },
+                "slot2" : {
+                    "bookingStatus" : "available",
+                    "empid" : null
+                }
+            }
+        ]
+    },
+    {
+        "id" : "005",
+        "fc" : "1",
+        "status" : [
+            {
+                "slot1" : {
+                    "bookingStatus" : "available",
+                    "empid" : "123456"
+                },
+                "slot2" : {
+                    "bookingStatus" : "booked",
+                    "empid" : null
+                }
+            }
+        ]
+    },
+    {
+        "id" : "101",
+        "fc" : "2",
+        "status" : [
+            {
+                "slot1" : {
+                    "bookingStatus" : "booked",
+                    "empid" : "123456"
+                },
+                "slot2" : {
+                    "bookingStatus" : "available",
+                    "empid" : null
+                }
+            }
+        ]
+    },
+    {
+        "id" : "102",
+        "fc" : "2",
+        "status" : [
+            {
+                "slot1" : {
+                    "bookingStatus" : "booked",
+                    "empid" : "123456"
+                },
+                "slot2" : {
+                    "bookingStatus" : "booked",
+                    "empid" : null
+                }
+            }
+        ]
+    },{
+        "id" : "103",
+        "fc" : "2",
+        "status" : [
+            {
+                "slot1" : {
+                    "bookingStatus" : "available",
+                    "empid" : "123456"
+                },
+                "slot2" : {
+                    "bookingStatus" : "available",
+                    "empid" : null
+                }
+            }
+        ]
+    },
+    {
+        "id" : "104",
+        "fc" : "2",
+        "status" : [
+            {
+                "slot1" : {
+                    "bookingStatus" : "booked",
+                    "empid" : "123456"
+                },
+                "slot2" : {
+                    "bookingStatus" : "available",
+                    "empid" : null
+                }
+            }
+        ]
+    },
+    {
+        "id" : "105",
+        "fc" : "2",
+        "status" : [
+            {
+                "slot1" : {
+                    "bookingStatus" : "available",
+                    "empid" : "123456"
+                },
+                "slot2" : {
+                    "bookingStatus" : "booked",
+                    "empid" : null
+                }
+            }
+        ]
+    }
+]
