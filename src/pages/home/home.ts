@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { HomeServiceProvider } from './home.service';
 import { FoodCourtPage } from '../pages/foodcourt/foodcourt';
 
 import { map, catchError, tap } from 'rxjs/operators';
@@ -22,7 +21,7 @@ export class HomePage {
   public seatCount:Number;
   public showBooking:Boolean;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public homeService: HomeServiceProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
    
   }
 

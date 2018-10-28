@@ -33,9 +33,7 @@ import { HttpClientModule } from '@angular/common/http';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
     FeedbackPage,
-    BookingPage,
   ],
   providers: [
     StatusBar,
