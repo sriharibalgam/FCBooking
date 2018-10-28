@@ -10,7 +10,7 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title class="content-align-center">Home</ion-title>
+    <ion-title class="content-align-center">Dashboard</ion-title>
   </ion-navbar>
   <!--ion-toolbar class="greeting">
       <div class="content-align-center $fontmd">Hello</div>
@@ -18,55 +18,66 @@
 </ion-header>
 
 
-<ion-content *ngIf="!bookingStatus" padding>
+<ion-content *ngIf="!bookingStatus" padding class="card-background-page">
 
-    <ion-refresher (ionRefresh)="doRefresh($event)">
-        <ion-refresher-content
-          pullingIcon="arrow-dropdown"
-          pullingText="Pull to refresh"
-          refreshingSpinner="circles"
-          refreshingText="Refreshing...">
-        </ion-refresher-content>
-      </ion-refresher>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles"
+      refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
 
-    <p>Finding a table in Food Court is easy now!</p>
-    <br>
+  <ion-card>
+    <ion-card-header>
+      Now Finding a seat in FoodCourt is easy
+    </ion-card-header>
+  </ion-card>
 
-    <h6>Food Court Status</h6>
-    <br>
+  <ion-card class="card-side-by-side" (click)="selectedFC(1)">
+    <img src="https://media.glassdoor.com/l/5b/1e/ee/ef/food-court-arena.jpg" />
+    <div class="card-title">Food Court 1</div>
+    <div class="card-subtitle">OFC</div>
+  </ion-card>
 
-    <ion-card *ngFor="let fc of foodCourts" padding (click)="goToFC(fc.fcName)" class="fcCard">
-      <ion-card-header>
-          {{ fc.fcName }}
-      </ion-card-header> 
-      <ion-card-content *ngFor="let slot of slots">
-        <div>
-          <p>{{ slot.slotId }}</p>
-        </div>
-      </ion-card-content>
-    </ion-card>
+  <ion-card class="card-side-by-side" (click)="selectedFC(2)">
+    <img src="https://media.glassdoor.com/l/ee/57/7a/79/food-court.jpg" />
+    <div class="card-title">Food Court 2</div>
+    <div class="card-subtitle">NFC</div>
+  </ion-card>
 
+  <ion-card *ngIf="showSlots">
+    <ion-card-header class="cardHeader">
+      Select Time Slot
+    </ion-card-header>
+
+    <ion-list radio-group>
+      <ion-item>
+        <ion-label>
+          <ion-icon ios="ios-time" md="md-time"></ion-icon> Slot 1: 01:00PM - 01:30 PM
+        </ion-label>
+        <ion-radio value="1" (ionSelect)="selectedTimeSlot(1)"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>
+          <ion-icon ios="ios-time" md="md-time"></ion-icon> Slot 2: 01:40PM - 02:10 PM
+        </ion-label>
+        <ion-radio value="2" (ionSelect)="selectedTimeSlot(2)"></ion-radio>
+      </ion-item>
+    </ion-list>
+    <p *ngIf="seatCount" class="seats">{{ seatCount }} Seats are available</p>
+  </ion-card>
+
+  <button ion-button outline *ngIf="showBooking" (click)="goToBooking()">Book Seats</button>
 </ion-content>
-
-<ion-footer>
-  <ion-toolbar>
-    <button ion-button (click)="bookNow()" class="btn-full-width">Book Now</button>
-  </ion-toolbar>
-</ion-footer>
 
 <ion-content *ngIf="bookingStatus" padding>
-
-    <h4>Your Booking Details</h4>
-  
-    <ion-card >
-        <ion-card-header>
-          {{ fc.fcName }}
-        </ion-card-header>
-        <ion-card-content>
-          <div>Seats Allotted: {{ fc.seatsBooked }}</div>
-        </ion-card-content>
-    </ion-card>
-  
+  <h4>Your Booking Details</h4>
+  <ion-card>
+    <ion-card-header>
+      {{ fc.fcName }}
+    </ion-card-header>
+    <ion-card-content>
+      <div>Seats Allotted: {{ fc.seatsBooked }}</div>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
-
-

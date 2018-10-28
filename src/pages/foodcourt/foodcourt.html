@@ -1,0 +1,58 @@
+<!--
+  Generated template for the FoodcourtPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Booking Layout</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-grid text-center>
+  
+    <ion-row *ngFor="let table of tables; let i=index;">
+      
+      <ion-col width-50 *ngFor="let seat of seats; let j=index;">
+        <ion-row>
+          <ion-col width-50>{{seat[j]}}{{table[i]}}</ion-col>
+          <ion-col width-50>{{seat[j]}}{{table[i]}}</ion-col>
+          <ion-col width-50>{{seat[j]}}{{table[i]}}</ion-col>
+          <ion-col width-50>{{seat[j]}}{{table[i]}}</ion-col>
+        </ion-row>
+      </ion-col>
+      <!-- <ion-col width-50>
+        <ion-row>
+          <ion-col width-25>A2</ion-col>
+          <ion-col width-25>B2</ion-col>
+          <ion-col width-25>C2</ion-col>
+          <ion-col width-25>D2</ion-col>
+        </ion-row>
+      </ion-col> -->
+    </ion-row>
+<!-- 
+    <ion-row>
+      <ion-col width-50>
+        <ion-row>
+          <ion-col width-25>A3</ion-col>
+          <ion-col width-25>B3</ion-col>
+          <ion-col width-25>C3</ion-col>
+          <ion-col width-25>D3</ion-col>
+        </ion-row>
+      </ion-col>
+      <ion-col width-50>
+        <ion-row>
+          <ion-col width-25>A4</ion-col>
+          <ion-col width-25>B4</ion-col>
+          <ion-col width-25>C4</ion-col>
+          <ion-col width-25>D4</ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row> -->
+
+  </ion-grid>
+</ion-content>
