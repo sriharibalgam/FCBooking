@@ -15,19 +15,22 @@
 <ion-content padding>
 
   <ion-grid text-center>
-    <ion-row *ngFor="let table of tables; let i=index;">
+    <ion-row *ngFor="let table of tables; let i=index;" class="fcTable">
 
       <ion-col width-50 *ngFor="let seat of seats; let j=index;">
-        <ion-row class="foodTable">
-          <ion-col class="table p1" width-25 >
-              <ion-label>{{table}}{{seat}}</ion-label>
-              <ion-checkbox (ionChange)="getSelectedSeat(tables[i], seats[j])"></ion-checkbox>  
-          </ion-col>
-        </ion-row>
+        <!-- <ion-row class="fcTableInner"> -->
+        <!-- <ion-col class="fcTableSeat p1" width-25 > -->
+        <ion-label>{{table}}{{seat}}</ion-label>
+        <ion-checkbox (ionChange)="getSelectedSeat(tables[i], seats[j])"></ion-checkbox>
+        <!-- </ion-col> -->
+        <!-- </ion-row> -->
       </ion-col>
-    
+
     </ion-row>
   </ion-grid>
 
-  <button ion-button round *ngIf="showBookingBtn" (click)="bookSeat()">Book Seat</button>
+  <div padding>
+    <button ion-button round *ngIf="showBookingBtn" (click)="bookSeat()">Book Seat</button>
+  </div>
+
 </ion-content>

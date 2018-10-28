@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
+import { HomePage } from '../home/home';
 /**
  * Generated class for the FoodcourtPage page.
  *
@@ -30,7 +31,7 @@ export class FoodcourtPage {
     } else {
       const alert = this.alertCtrl.create({
         title: 'Warning',
-        subTitle: 'You are not allowed to Select morethan 4 Seats',
+        subTitle: 'Oops!! You are not allowed to Select morethan 4 Seats',
         buttons: ['OK']
       });
       alert.present();
@@ -43,7 +44,7 @@ export class FoodcourtPage {
   public bookSeat(){
     const alert = this.alertCtrl.create({
       title: 'Thank You',
-      subTitle: 'You have successfully Booked a Seat(s).',
+      subTitle: `You have successfully Booked ${this.selectedSeatArr.length} Seat(s).`,
       buttons: ['OK']
     });
     alert.present();

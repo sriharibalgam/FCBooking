@@ -1,13 +1,35 @@
 page-foodcourt {
    .col{
-     border: 1px solid orange;
+     border: 1px solid #607D8B;
+     padding:0px;
    }
-
+   .label-ios {
+      margin: 5px 5px 5px 0;
+    }
+    .grid{
+      width: 75%;
+    }
    .fcTableSeat{
-      background: #eee;
+      margin-bottom: 5px;
+      background: orange;
    }
 
    .fcTable{
      margin-bottom: 10px;
    }
+
+   .tableLayout{
+      border: 1px solid #fed;
+   }
+   .tableSeat{
+      border: 1px solid #444;
+      float: left;
+      width: 30px;
+      height: 30px;
+      padding: 5px;
+   }
+   .seat3{
+     clear:left;
+   }
+
 }

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { FoodCourtPage } from '../pages/foodcourt/foodcourt';
+import { FoodcourtPage } from '../foodcourt/foodcourt';
 
 import { map, catchError, tap } from 'rxjs/operators';
 
